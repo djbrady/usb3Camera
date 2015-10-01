@@ -12,6 +12,7 @@ OBJS = threadedCapture.o
 
 ${OUTPUTNAME}: ${OBJS}
 	${CC} -o ${OUTPUTNAME} ${OBJS} ${LIBS} ${COMMON_LIBS} 
+	mv ${OUTPUTNAME} ${OUTDIR}
 
 %.o: %.cpp
 	${CC} ${CFLAGS} ${INCLUDE} -c $*.cpp

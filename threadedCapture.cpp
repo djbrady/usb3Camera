@@ -168,10 +168,20 @@ int saveImageThread (Image inImage, int imCount)
 
 int CaptureImageSequence( PGRGuid guid )
 {
-    //const int k_numImages = 100;
-    int k_numImages;
+
+    int k_numImages =0;
+    string input="";
+
+  while (true) {
     cout << "how many frames do you want to capture?" <<endl;
-    cin >> k_numImages;
+    getline(cin, input);
+
+   stringstream myStream(input);
+   if (myStream >> k_numImages)
+     break;
+   cout << "Invalid number, please try again" << endl;
+ 
+  }
 
     Error error;
     Camera cam;
