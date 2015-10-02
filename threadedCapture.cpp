@@ -81,10 +81,15 @@ int InitializeCamera( PGRGuid guid )
 
     Format7ImageSettings fmt7ImageSettings;
     fmt7ImageSettings.mode = k_fmt7Mode;
-    fmt7ImageSettings.offsetX = 330;
-    fmt7ImageSettings.offsetY = 320;
-    fmt7ImageSettings.width = 1280;
-    fmt7ImageSettings.height = 720;
+    // uncomment these lines to switch to 720 resolution
+    //  fmt7ImageSettings.offsetX = 320;
+    //  fmt7ImageSettings.offsetY = 240;
+    //    fmt7ImageSettings.width = 1280;
+    //   fmt7ImageSettings.height = 720;
+    fmt7ImageSettings.offsetX = 0;
+    fmt7ImageSettings.offsetY = 60;
+    fmt7ImageSettings.width = 1920;
+    fmt7ImageSettings.height = 1080;
     fmt7ImageSettings.pixelFormat = k_fmt7PixFmt;
     bool valid;
     Format7PacketInfo fmt7PacketInfo;
